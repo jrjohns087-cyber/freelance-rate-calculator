@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelance Rate Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Freelance Rate Calculator</h1>
+    <form id="calcForm">
+      <label>
+        Desired Monthly Income ($):
+        <input type="number" id="monthlyIncome" required />
+      </label>
+      <label>
+        Billable Hours per Month:
+        <input type="number" id="hoursPerMonth" required />
+      </label>
+      <label>
+        Monthly Expenses (% of income, e.g., taxes, tools):
+        <input type="number" id="expensePct" value="30" min="0" max="100" step="1" />
+      </label>
+      <button type="submit">Calculate</button>
+    </form>
+    <section id="result" class="hidden">
+      <h2>Suggested Rates</h2>
+      <p id="hourlyRate"></p>
+      <p id="dailyRate"></p>
+      <button id="copyBtn">Copy to Clipboard</button>
+    </section>
+    <section class="affiliate">
+      <a href="https://www.freshbooks.com/referral?aid=YOUR_AFFILIATE_ID" target="_blank">
+        <img src="https://www.freshbooks.com/images/logo.png" alt="FreshBooks" width="150" />
+        <p>Earn more with FreshBooks (affiliate)</p>
+      </a>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
